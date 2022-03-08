@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.portfolio .content .items {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.flex-center {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.portfolio .content .items .item {
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 1;
+  background-position: center center;
+  background-size: cover;
+}
+.portfolio .content .items .item .title {
+  width: 100%;
+  border-radius: 15px;
+  height: 100%;
+  transition: 0.4s;
+  visibility: hidden;
+  background-color: #ffb400;
   color: white;
+  font-size: 25px;
+  font-weight: 700;
 }
-
-.App-link {
-  color: #61dafb;
+.portfolio .content .items .item:hover {
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
+.portfolio .content .items .topToBottomIn .title {
+  visibility: visible;
+  animation: topToBottom ease 0.4s;
+}
+.portfolio .content .items .bottomToTopIn .title {
+  visibility: visible;
+  animation: bottomToTop ease 0.4s;
+}
+.portfolio .content .items .leftToRightIn .title {
+  visibility: visible;
+  animation: leftToRight ease 0.4s;
+}
+.portfolio .content .items .rightToLeftIn .title {
+  visibility: visible;
+  animation: rightToLeft ease 0.4s;
+}
+.portfolio .content .items .topToBottomOut .title {
+  visibility: hidden;
+  animation: topToBottom1 ease 0.4s;
+}
+.portfolio .content .items .bottomToTopOut .title {
+  visibility: hidden;
+  animation: bottomToTop1 ease 0.4s;
+}
+.portfolio .content .items .leftToRightOut .title {
+  visibility: hidden;
+  animation: leftToRight1 ease 0.4s;
+}
+.portfolio .content .items .rightToLeftOut .title {
+  visibility: hidden;
+  animation: rightToLeft1 ease 0.4s;
+}
+@keyframes leftToRight {
   from {
-    transform: rotate(0deg);
-  }
+    transform: translateX(-100%);
+ }
   to {
-    transform: rotate(360deg);
-  }
+    transform: translateX(0);
+ }
+}
+@keyframes rightToLeft {
+  from {
+    transform: translateX(100%);
+ }
+  to {
+    transform: translateX(0);
+ }
+}
+@keyframes topToBottom {
+  from {
+    transform: translateY(-100%);
+ }
+  to {
+    transform: translateY(0);
+ }
+}
+@keyframes bottomToTop {
+  from {
+    transform: translateY(100%);
+ }
+  to {
+    transform: translateY(0);
+ }
+}
+@keyframes leftToRight1 {
+  to {
+    transform: translateX(-100%);
+ }
+  from {
+    transform: translateX(0);
+ }
+}
+@keyframes rightToLeft1 {
+  to {
+    transform: translateX(100%);
+ }
+  from {
+    transform: translateX(0);
+ }
+}
+@keyframes topToBottom1 {
+  to {
+    transform: translateY(-100%);
+ }
+  from {
+    transform: translateY(0);
+ }
+}
+@keyframes bottomToTop1 {
+  to {
+    transform: translateY(100%);
+ }
+  from {
+    transform: translateY(0);
+ }
 }
