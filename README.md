@@ -1,6 +1,6 @@
 # follow-mouse-images
-<img src="https://media2.giphy.com/media/jpnrKSJNWnL8pinujM/giphy.gif?cid=790b7611ee847b896f7ebdb6cb9b17d5ec55cc037feb4302&rid=giphy.gif&ct=g" />
 [![NPM](https://img.shields.io/npm/v/follow-mouse-images.svg)](https://www.npmjs.com/package/follow-mouse-images) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+<img src="https://media2.giphy.com/media/jpnrKSJNWnL8pinujM/giphy.gif?cid=790b7611ee847b896f7ebdb6cb9b17d5ec55cc037feb4302&rid=giphy.gif&ct=g" />
 
 ## Install
 
