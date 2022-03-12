@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import styles from './styles.css'
+import styles from './styles.module.css'
 const Item = ({
   item,
   onClick,
-  background = '#ffb400',
+  bg = '#ffb400',
   textColor = '#fff',
   width = '350px',
   height = '230px'
@@ -62,13 +62,13 @@ const Item = ({
       // eslint-disable-next-line react/jsx-no-bind
       onClick={openPreview}
       onMouseOut={onHoverOut}
-      className={`${styles.item}  ${styles[className]}`}
+      className={`${styles[item]}  ${styles[className]}`}
       onMouseMove={onMouseOver}
       style={{ backgroundImage: `url(${item.img})`, width, height }}
     >
       <div
-        className={`${styles.title} ${styles['flex-center']}`}
-        style={{ backgroundColor: background, color: textColor }}
+        className={[styles.title, styles['flex-center']]}
+        style={{ backgroundColor: bg, color: textColor }}
       >
         {item.title}
       </div>
@@ -77,10 +77,9 @@ const Item = ({
 }
 const FollowMouseImages = (props) => {
   return (
-    // eslint-disable-next-line dot-notation
     <div className={styles.portfolio}>
       <div className={styles.content}>
-        <div className={`${styles.items} ${styles['flex-center']}`}>
+        <div className={[styles.items, styles['flex-center']]}>
           {props.data.map((item, index) => (
             <Item item={item} key={index} {...props} />
           ))}
